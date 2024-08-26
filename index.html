@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Star Wars Timeline</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars Timeline</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<p>
-  This example demonstrates the item type "background", see "Period A" and
-  "Period B". The background areas can be styled with css.
-</p>
+    <header>
+        <h1>Star Wars Timeline</h1>
+    </header>
+    
+    <main>
+        <p class="explanation">
+            This interactive timeline showcases key events in the Star Wars universe. Click on any event to view more details.
+        </p>
+        <div id="visualization"></div>
+        <div id="event-details" class="hidden">
+            <h2 id="event-title"></h2>
+            <p id="event-date"></p>
+            <p id="event-description"></p>
+        </div>
+    </main>
 
-<div id="visualization"></div>
+    <footer>
+        <p>&copy; 2024 Timo Goedertier</p>
+    </footer>
 
-
-
-<script src='https://visjs.github.io/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js'></script><script  src="script.js"></script>
-
+    <script src='https://visjs.github.io/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js'></script>
+    <script src="script.js"></script>
 </body>
 </html>
