@@ -1,5 +1,5 @@
 var items = new vis.DataSet([
-
+  
   // Areas
   {
     id: "A",
@@ -27,12 +27,32 @@ var items = new vis.DataSet([
 ]);
 
 var container = document.getElementById("visualization");
-
-// Starting Screen
 var options = {
-  start: "2014-01-10",
-  end: "2014-02-10",
-  editable: true,
+start: "2014-01-10",
+end: "2014-02-10",
+editable: true
 };
 
 var timeline = new vis.Timeline(container, items, options);
+
+
+// Event details elements
+var eventDetails = document.getElementById("event-details");
+var eventTitle = document.getElementById("event-title");
+var eventDate = document.getElementById("event-date");
+var eventDescription = document.getElementById("event-description");
+
+// Click event handler
+timeline.on('select', function (properties) {
+if (properties.items.length > 0) {
+    var selectedItem = items.get(properties.items[0]);
+    
+    eventTitle.textContent = selectedItem.content;
+    eventDate.textContent = selectedItem.start;
+    eventDescription.textContent = selectedItem.description || "No description available.";
+    
+    eventDetails.classList.remove("hidden");
+} else {
+    eventDetails.classList.add("hidden");
+}
+});
