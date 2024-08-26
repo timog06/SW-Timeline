@@ -1,5 +1,5 @@
 var items = new vis.DataSet([
-  
+
   // Areas
   {
     id: "A",
@@ -30,10 +30,19 @@ var container = document.getElementById("visualization");
 var options = {
 start: "2014-01-10",
 end: "2014-02-10",
-editable: true
+editable: false,
+showCurrentTime: false,
+height: '300px'
 };
 
 var timeline = new vis.Timeline(container, items, options);
+
+// Add a custom time bar
+var customTimeId = 'customTimeId';
+timeline.addCustomTime(new Date(), customTimeId);
+
+var customDate = new Date('2014-01-20');
+timeline.setCustomTime(customDate, customTimeId);
 
 
 // Event details elements
