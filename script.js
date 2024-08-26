@@ -1,4 +1,6 @@
 var items = new vis.DataSet([
+
+  // Areas
   {
     id: "A",
     content: "Period A",
@@ -14,6 +16,8 @@ var items = new vis.DataSet([
     type: "background",
     className: "negative",
   },
+
+  // Items
   { id: 1, content: "item 1<br>start", start: "2014-01-23" },
   { id: 2, content: "item 2", start: "2014-01-18" },
   { id: 3, content: "item 3", start: "2014-01-21" },
@@ -23,6 +27,8 @@ var items = new vis.DataSet([
 ]);
 
 var container = document.getElementById("visualization");
+
+// Starting Screen
 var options = {
   start: "2014-01-10",
   end: "2014-02-10",
