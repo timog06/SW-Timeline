@@ -11,7 +11,7 @@ var items = new vis.DataSet([
   {
     id: "B",
     content: "Period B",
-    start: "2014-01-25",
+    start: "-2014-01-25",
     end: "2014-01-30",
     type: "background",
     className: "negative",
@@ -51,17 +51,28 @@ var eventTitle = document.getElementById("event-title");
 var eventDate = document.getElementById("event-date");
 var eventDescription = document.getElementById("event-description");
 
-// Click event handler
+/// Click event handler
 timeline.on('select', function (properties) {
-if (properties.items.length > 0) {
-    var selectedItem = items.get(properties.items[0]);
+  if (properties.items.length > 0) {
+      var selectedItem = items.get(properties.items[0]);
+
+      eventTitle.textContent = selectedItem.content;
     
-    eventTitle.textContent = selectedItem.content;
-    eventDate.textContent = selectedItem.start;
-    eventDescription.textContent = selectedItem.description || "No description available.";
-    
-    eventDetails.classList.remove("hidden");
-} else {
-    eventDetails.classList.add("hidden");
-}
+      var date = new Date(selectedItem.start);
+      var year = date.getFullYear();
+      var formattedDate;
+
+      if (year > 0) {
+          formattedDate = year + " ABY";
+      } else {
+          formattedDate = Math.abs(year) + " BBY";
+      }
+
+      eventDate.textContent = formattedDate;
+      eventDescription.textContent = selectedItem.description || "No description available.";
+
+      eventDetails.classList.remove("hidden");
+  } else {
+      eventDetails.classList.add("hidden");
+  }
 });
