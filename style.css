@@ -64,3 +64,7 @@ main {
     font-style: italic;
     color: #666;
 }
+
+.hidden {
+  color:#000;
+}
