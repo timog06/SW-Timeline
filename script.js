@@ -18,18 +18,18 @@ var items = new vis.DataSet([
   },
 
   // Items
-  { id: 1, content: "item 1<br>start", start: "2014-01-23" },
-  { id: 2, content: "item 2", start: "2014-01-18" },
-  { id: 3, content: "item 3", start: "2014-01-21" },
-  { id: 4, content: "item 4", start: "2014-01-19", end: "2014-01-24" },
-  { id: 5, content: "item 5", start: "2014-01-28", type: "point" },
-  { id: 6, content: "item 6", start: "2014-01-26" },
+  { id: 1, content: "item 1 <br> start", start: "0001-01-23" },
+  { id: 2, content: "item 2", start: "0003-01-01" },
+  { id: 3, content: "item 3", start: "0010-01-01" },
+  { id: 4, content: "item 4", start: "0012-01-01", end: "0013-01-01" },
+  { id: 5, content: "item 5", start: "0014-01-01", type: "point" },
+  { id: 6, content: "item 6", start: "0024-01-01" },
 ]);
 
 var container = document.getElementById("visualization");
 var options = {
-start: "2014-01-10",
-end: "2014-02-10",
+start: "0000-01-01",
+end: "0025-01-01",
 editable: false,
 showCurrentTime: false,
 height: '300px'
@@ -41,7 +41,7 @@ var timeline = new vis.Timeline(container, items, options);
 var customTimeId = 'customTimeId';
 timeline.addCustomTime(new Date(), customTimeId);
 
-var customDate = new Date('2014-01-20');
+var customDate = new Date('0050-06-15');
 timeline.setCustomTime(customDate, customTimeId);
 
 
