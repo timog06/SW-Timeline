@@ -35,6 +35,10 @@ main {
   height: 350px;
 }
 
+.vis-custom-time {
+  background-color: red !important;
+}
+
 .vis-item.vis-background.negative {
     background-color: rgba(255, 0, 0, 0.2);
 }
