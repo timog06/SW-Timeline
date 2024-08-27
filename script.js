@@ -10,9 +10,10 @@ var items = new vis.DataSet([
   {
     id: "B",
     content: "Period B",
-    start: "0013-01-25",
-    end: "0016-01-30",
+    start: new Date(-13, 1, 25),
+    end: "0009-01-30",
     type: "background",
+    style: "color: red; background-color: pink;",
   },
 
   // Items
@@ -27,7 +28,7 @@ var items = new vis.DataSet([
 
 var container = document.getElementById("visualization");
 var options = {
-  start: new Date(-3, 11, 26),
+  start: new Date(-5, 1, 1),
   end: "0020-01-01",
   editable: false,
   showCurrentTime: false,
