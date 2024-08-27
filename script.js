@@ -17,12 +17,12 @@ var items = new vis.DataSet([
 
   // Items
   { id: 1, content: "item 1 <br> start", start: "0001-01-23" },
-  { id: 2, content: "item 2", start: "-0003, 01, 01" },
+  { id: 2, content: "item 2", start: new Date(-3, 11, 26) },
   { id: 3, content: "item 3", start: "0010-01-01" },
   { id: 4, content: "item 4", start: "0012-01-01", end: "0013-01-01" },
   { id: 5, content: "item 5", start: "0014-01-01", type: "point" },
   { id: 6, content: "item 6", start: "0024-01-01" },
-  { id: 7, content: "item 7", start: "-100-11-31" },
+  { id: 7, content: "item 7", start: new Date(-100, 11, 31) },
 ]);
 
 var container = document.getElementById("visualization");
@@ -40,7 +40,7 @@ var timeline = new vis.Timeline(container, items, options);
 var customTimeId = "customTimeId";
 timeline.addCustomTime(new Date(), customTimeId);
 
-var customDate = new Date("0050-06-15");
+var customDate = new Date("0050-01-01");
 timeline.setCustomTime(customDate, customTimeId);
 
 // Event details elements
