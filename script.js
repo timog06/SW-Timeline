@@ -3,32 +3,32 @@ var items = new vis.DataSet([
   {
     id: "A",
     content: "Period A",
-    start: new Date(14, 1, 16),
-    end: new Date(24, 1, 22),
+    start: "0014-01-16",
+    end: "0024-01-22",
     type: "background",
   },
   {
     id: "B",
     content: "Period B",
-    start: new Date(13, 1, 25),
-    end: new Date(16, 1, 30),
+    start: "0013-01-25",
+    end: "0016-01-30",
     type: "background",
   },
 
   // Items
-  { id: 1, content: "item 1 <br> start", start: new Date(1, 1, 23) },
+  { id: 1, content: "item 1 <br> start", start: "0001-01-23" },
   { id: 2, content: "item 2", start: new Date(-3, 11, 26) },
-  { id: 3, content: "item 3", start: new Date(10, 1, 1) },
-  { id: 4, content: "item 4", start: new Date(12, 1, 1), end: new Date(13, 1, 1) },
-  { id: 5, content: "item 5", start: new Date(14, 1, 1), type: "point" },
-  { id: 6, content: "item 6", start: new Date(24, 1, 1) },
+  { id: 3, content: "item 3", start: "0010-01-01" },
+  { id: 4, content: "item 4", start: "0012-01-01", end: "0013-01-01" },
+  { id: 5, content: "item 5", start: "0014-01-01", type: "point" },
+  { id: 6, content: "item 6", start: "0024-01-01" },
   { id: 7, content: "item 7", start: new Date(-100, 11, 31) },
 ]);
 
 var container = document.getElementById("visualization");
 var options = {
-  start: new Date(-5, 1, 1),
-  end: new Date(20, 1, 1),
+  start: new Date(-3, 11, 26),
+  end: "0020-01-01",
   editable: false,
   showCurrentTime: false,
   height: "300px",
@@ -40,7 +40,7 @@ var timeline = new vis.Timeline(container, items, options);
 var customTimeId = "customTimeId";
 timeline.addCustomTime(new Date(), customTimeId);
 
-var customDate = new Date(50, 1, 1);
+var customDate = new Date("0050-01-01");
 timeline.setCustomTime(customDate, customTimeId);
 
 // Event details elements
