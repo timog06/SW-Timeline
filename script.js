@@ -19,7 +19,7 @@ var items = new vis.DataSet([
 
   // Items
   { id: 1, content: "item 1 <br> start", start: "0001-01-23", abyBby: "ABY" },
-  { id: 2, content: "item 2", start: "0003-01-01", abyBby: "ABY" },
+  { id: 2, content: "item 2", start: "03, 01, 01", abyBby: "ABY" },
   { id: 3, content: "item 3", start: "0010-01-01", abyBby: "ABY" },
   { id: 4, content: "item 4", start: "0012-01-01", end: "0013-01-01", abyBby: "ABY" },
   { id: 5, content: "item 5", start: "0014-01-01", type: "point", abyBby: "ABY" },
