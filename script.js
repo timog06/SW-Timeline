@@ -2,44 +2,274 @@ fetch("descriptions.json")
   .then((response) => response.json())
   .then((descriptions) => {
     var items = new vis.DataSet([
-      // Areas
+      // ------------------------------------------- Areas
       {
         id: "A",
-        content: "Period A",
-        start: "0014-01-16",
-        end: "0024-01-22",
+        content: "High Republic Era",
+        start: new Date(-500, 1, 1),
+        end: new Date(-100, 12, 31),
         type: "background",
+        style: "background-color: lightblue;",
       },
       {
         id: "B",
-        content: "Era of the Empire",
+        content: "Regime of the Empire",
         start: new Date(-19, 10, 1),
-        end: "0005-01-01",
+        end: "0005-12-31",
         type: "background",
-        style: "color: red; background-color: pink;",
+        style: "background-color: pink;",
+      },
+      {
+        id: "C",
+        content: "New Republic Era",
+        start: "0005-01-01",
+        end: "0034-12-31",
+        type: "background",
+        style: "background-color: lightblue;",
+      },
+      {
+        id: "D",
+        content: "Regime of the First Order",
+        start: "0021-01-01",
+        end: "0035-12-31",
+        type: "background",
+        style: "background-color: pink;",
+      },
+      {
+        id: "E",
+        content: "Old Republic Era",
+        start: new Date(-25000, 1, 1),
+        end: new Date(-1032, 1, 1),
+        type: "background",
+        style: "background-color: lightblue;",
       },
 
-      // Items
+      // ------------------------------------------- Items
+
+      // Year Zero
+      {
+        id: 0,
+        content: "Battle of Yavin",
+        start: "0000-01-01",
+        description: descriptions["0"],
+      },
+
+      // Movies
       {
         id: 1,
-        content: "Fall of the Galactic Republic",
-        start: new Date(-19, 9, 1),
-        description: descriptions["1"],
+        subgroup: "movies",
+        content: "The Phantom Menace",
+        start: new Date(-32, 1, 1),
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode1",
       },
       {
         id: 2,
+        subgroup: "movies",
+        content: "Attack of the Clones",
+        start: new Date(-22, 1, 1),
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode2",
+      },
+      {
+        id: 3,
+        subgroup: "movies",
+        content: "Revenge of the Sith",
+        start: new Date(-19, 1, 1),
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode3",
+      },
+      {
+        id: 4,
+        subgroup: "movies",
+        content: "A New Hope",
+        start: "0000-01-01",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode4",
+      },
+      {
+        id: 5,
+        subgroup: "movies",
+        content: "The Empire Strikes Back",
+        start: "0003-01-01",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode5",
+      },
+      {
+        id: 6,
+        subgroup: "movies",
+        content: "Return of the Jedi",
+        start: "0004-01-01",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode6",
+      },
+      {
+        id: 7,
+        subgroup: "movies",
+        content: "The Force Awakens",
+        start: "0034-01-01",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode7",
+      },
+      {
+        id: 8,
+        subgroup: "movies",
+        content: "The Last Jedi",
+        start: "0034-12-31",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode8",
+      },
+      {
+        id: 9,
+        subgroup: "movies",
+        content: "The Rise of Skywalker",
+        start: "0034-01-01",
+        style: "background-color: yellow",
+        description: descriptions[""],
+        pic: "episode9",
+      },
+
+      // Series
+      {
+        id: 17,
+        content: "The Clone Wars",
+        start: new Date(-22,1 ,1),
+        end: new Date(-19,1 ,1),
+        type: "range",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 18,
+        content: "The Bad Batch",
+        start: new Date(-19,1 ,1),
+        end: new Date(-18,1 ,1),
+        type: "range",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 19,
+        content: "Rebels",
+        start: new Date(-5,1 ,1),
+        end: new Date(-1,1 ,1),
+        type: "range",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 20,
+        content: "The Mandalorian",
+        start: "0009-01-01",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 21,
+        content: "The Book of Boba Fett",
+        start: "0009-01-01",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 22,
+        content: "Obi-Wan Kenobi",
+        start: new Date(-9,1 ,1),
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 23,
+        content: "Andor",
+        start: new Date(-5,1 ,1),
+        end: new Date(-1,1 ,1),
+        type: "range",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 24,
+        content: "Ahsoka",
+        start: "0009-01-01",
+        description: descriptions[""],
+        pic: "",
+      },
+
+      // Era Change
+      {
+        id: 10,
+        content: "Fall of the Galactic Republic",
+        start: new Date(-19, 9, 1),
+        description: descriptions["10"],
+        pic: "",
+      },
+      {
+        id: 11,
         content: "Founding of the Galactic Empire",
         start: new Date(-19, 10, 1),
-        description: descriptions["2"],
+        description: descriptions["11"],
+        pic: "",
       },
-      { id: 3, content: "item 3", start: "0010-01-01" },
-      { id: 4, content: "item 4", start: "0012-01-01", end: "0015-01-01" },
-      { id: 5, content: "item 5", start: "0014-01-01", type: "point" },
-      { id: 6, content: "item 6", start: "0024-01-01" },
-      { id: 7, content: "item 7", start: new Date(-100, 11, 31) },
+      {
+        id: 12,
+        content: "Formation of the modern Galactic Republic",
+        start: new Date(-1032, 1, 1),
+        description: descriptions["12"],
+        pic: "",
+      },
+      {
+        id: 25,
+        content: "Public Announcement of the First Order",
+        start: "0021-01-01",
+        description: descriptions["12"],
+        pic: "",
+      },
+
+      // Wars
+      {
+        id: 13,
+        content: "The Clone Wars",
+        start: new Date(-22, 1, 1),
+        end: new Date(-19, 8, 1),
+        type: "range",
+        description: descriptions["13"],
+        pic: "clone_wars",
+      },
+      {
+        id: 14,
+        content: "New Sith Wars",
+        start: new Date(-2000, 1, 1),
+        end: new Date(-1000, 12, 31),
+        type: "range",
+        description: descriptions["14"],
+      },
+
+      // Battles
+      {
+        id: 15,
+        content: "Battle of Exegol",
+        start: "0035-01-01",
+        description: descriptions["15"],
+      },
+
+      // Events
+      {
+        id: 16,
+        content: "item 7",
+        start: new Date(-100, 11, 31),
+        description: descriptions["16"],
+      },
     ]);
 
-    // Initialize Timeline
+    // ------------------------------------------- Initialize Timeline
     var container = document.getElementById("visualization");
     var options = {
       start: new Date(-5, 1, 1),
@@ -58,36 +288,62 @@ fetch("descriptions.json")
     var customDate = new Date("0050-01-01");
     timeline.setCustomTime(customDate, customTimeId);
 
-    // Event elements
+    // ------------------------------------------- Event elements
     var eventDetails = document.getElementById("event-details");
     var eventTitle = document.getElementById("event-title");
     var eventDate = document.getElementById("event-date");
     var eventDescription = document.getElementById("event-description");
 
-    /// Click event handler
+    // Click event handler
     timeline.on("select", function (properties) {
       if (properties.items.length > 0) {
         var selectedItem = items.get(properties.items[0]);
 
+        // Set the title and date for the selected item
         eventTitle.textContent = selectedItem.content;
 
-        var date = new Date(selectedItem.start);
-        var year = date.getFullYear();
+        if (selectedItem.type === "range" && selectedItem.end) {
+          var startYear = new Date(selectedItem.start).getFullYear();
+          var endYear = new Date(selectedItem.end).getFullYear();
 
-        // Convert the date to BBY/ABY format
-        var date = new Date(selectedItem.start);
-        var year = date.getFullYear();
-        var formattedDate;
+          var startFormattedDate =
+            startYear >= 0 ? startYear + " ABY" : Math.abs(startYear) + " BBY";
+          var endFormattedDate =
+            endYear >= 0 ? endYear + " ABY" : Math.abs(endYear) + " BBY";
 
-        if (year > 0) {
-          formattedDate = year + " ABY";
+          eventDate.textContent = `${startFormattedDate} - ${endFormattedDate}`;
         } else {
-          formattedDate = Math.abs(year) + " BBY";
+          var date = new Date(selectedItem.start);
+          var year = date.getFullYear();
+
+          // Convert the date to BBY/ABY format
+          var formattedDate =
+            year >= 0 ? year + " ABY" : Math.abs(year) + " BBY";
+          eventDate.textContent = formattedDate;
         }
 
-        eventDate.textContent = formattedDate;
         eventDescription.textContent =
           selectedItem.description || "No description available.";
+
+        var eventImage = document.getElementById("event-image");
+
+        eventImage.removeAttribute("src");
+        eventImage.style.display = "none";
+
+        if (selectedItem.pic) {
+          const imagePath = `pics/${selectedItem.pic}.webp`;
+
+          eventImage.src = imagePath;
+          eventImage.onload = function () {
+            eventImage.style.display = "block";
+          };
+
+          eventImage.onerror = function () {
+            eventImage.style.display = "none";
+          };
+        } else {
+          eventImage.style.display = "none";
+        }
 
         eventDetails.classList.remove("hidden");
       } else {

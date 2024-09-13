@@ -1,35 +1,46 @@
+/* Base Styles */
 body,
 html {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-header, footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+header,
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
 }
 
 main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 }
 
 .explanation {
-    max-width: 600px;
-    text-align: center;
-    margin-bottom: 2rem;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
+.explanation-time {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color:#7f7f7f;
+}
+
+/* Timeline */
 #visualization {
   width: 80%;
   height: 350px;
@@ -40,31 +51,54 @@ main {
 }
 
 .vis-item.vis-background.negative {
-    background-color: rgba(255, 0, 0, 0.2);
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
+/* Events */
 #event-details {
-    margin-top: 2rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 600px;
-    width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
 }
 
 #event-details.hidden {
-    display: none;
+  display: none;
 }
 
 #event-title {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #event-date {
-    font-style: italic;
-    color: #666;
+  font-style: italic;
+  color: #666;
 }
 
-.hidden {
-  color:#000;
+/* Image styles */
+#event-image {
+  width: 600px;
+  height: auto;
+  margin-top: 7px;
+  border-radius: 5px;
+  display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  #event-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #event-image {
+    width: 256px;
+    margin: 10px 0;
+  }
+
+  #event-description {
+    margin-right: 0;
+  }
 }

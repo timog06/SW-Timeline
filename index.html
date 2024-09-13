@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars Timeline</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Star Wars Timeline</h1>
+      <h1>Star Wars Timeline</h1>
     </header>
-    
+
     <main>
-        <p class="explanation">
-            This interactive timeline showcases key events in the Star Wars universe. Click on any event to view more details.
-        </p>
-        <div id="visualization"></div>
-        <div id="event-details" class="hidden">
-            <h2 id="event-title"></h2>
-            <p id="event-date"></p>
-            <p id="event-description"></p>
-        </div>
+      <p class="explanation">
+        This interactive timeline showcases key events in the Star Wars
+        universe. Click on any event to view more details.
+      </p>
+      <p class="explanation-time">
+        The "year zero" in this system was based on the destruction of the first
+        Death Star during the Battle of Yavin. BBY stands for "Before the Battle
+        of Yavin" and ABY stands for "After the Battle of Yavin".
+      </p>
+      <div id="visualization"></div>
+      <div id="event-details" class="hidden">
+        <h2 id="event-title"></h2>
+        <p id="event-date"></p>
+        <img id="event-image" src="" alt="[Event image]" />
+        <p id="event-description"></p>
+      </div>
     </main>
 
     <footer>
-        <p class="hidden">&copy; 2024 Timo Goedertier</p>
+      <p>&copy; 2024 Timo Goedertier</p>
     </footer>
 
     <script src="https://visjs.github.io/vis-timeline/standalone/umd/vis-timeline-graph2d.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
