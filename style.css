@@ -44,7 +44,6 @@ main {
 #quotes {
   max-width: 600px;
   text-align: center;
-  margin-bottom: 2rem;
   font-style: italic;
   color: #585858;
 }
