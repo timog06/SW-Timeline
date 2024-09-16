@@ -1,3 +1,36 @@
+// Fetch and display quotes
+fetch("quotes.json")
+  .then((response) => response.json())
+  .then((quotes) => {
+    const quotesContainer = document.getElementById("quotes");
+    let currentQuoteIndex = 0;
+
+    function showNextQuote() {
+      const currentQuote = quotes[currentQuoteIndex];
+      quotesContainer.textContent = `"${currentQuote.quote}"`;
+      const authorContainer = document.getElementById("quote-author");
+      authorContainer.textContent = `- ${currentQuote.author}`;
+    
+      quotesContainer.style.opacity = 1;
+      authorContainer.style.opacity = 1;
+    
+      setTimeout(() => {
+        quotesContainer.style.opacity = 0;
+        authorContainer.style.opacity = 0;
+    
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+    
+        setTimeout(showNextQuote, 2000);
+      }, 8000);
+    }
+
+    // Start the quote rotation
+    showNextQuote();
+  })
+  .catch((error) => {
+    console.error("Error loading quotes:", error);
+  });
+
 fetch("descriptions.json")
   .then((response) => response.json())
   .then((descriptions) => {
@@ -62,7 +95,7 @@ fetch("descriptions.json")
         start: new Date(-32, 1, 1),
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode1",
+        pic: "episode1.webp",
       },
       {
         id: 2,
@@ -71,7 +104,7 @@ fetch("descriptions.json")
         start: new Date(-22, 1, 1),
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode2",
+        pic: "episode2.webp",
       },
       {
         id: 3,
@@ -80,7 +113,7 @@ fetch("descriptions.json")
         start: new Date(-19, 1, 1),
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode3",
+        pic: "episode3.webp",
       },
       {
         id: 4,
@@ -89,7 +122,7 @@ fetch("descriptions.json")
         start: "0000-01-01",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode4",
+        pic: "episode4.webp",
       },
       {
         id: 5,
@@ -98,7 +131,7 @@ fetch("descriptions.json")
         start: "0003-01-01",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode5",
+        pic: "episode5.webp",
       },
       {
         id: 6,
@@ -107,7 +140,7 @@ fetch("descriptions.json")
         start: "0004-01-01",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode6",
+        pic: "episode6.webp",
       },
       {
         id: 7,
@@ -116,7 +149,7 @@ fetch("descriptions.json")
         start: "0034-01-01",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode7",
+        pic: "episode7.webp",
       },
       {
         id: 8,
@@ -125,7 +158,7 @@ fetch("descriptions.json")
         start: "0034-12-31",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode8",
+        pic: "episode8.webp",
       },
       {
         id: 9,
@@ -134,7 +167,7 @@ fetch("descriptions.json")
         start: "0034-01-01",
         style: "background-color: yellow",
         description: descriptions[""],
-        pic: "episode9",
+        pic: "episode9.webp",
       },
 
       // Series
@@ -241,7 +274,7 @@ fetch("descriptions.json")
         end: new Date(-19, 8, 1),
         type: "range",
         description: descriptions["13"],
-        pic: "clone_wars",
+        pic: "clone_wars.webp",
       },
       {
         id: 14,
@@ -331,7 +364,7 @@ fetch("descriptions.json")
         eventImage.style.display = "none";
 
         if (selectedItem.pic) {
-          const imagePath = `pics/${selectedItem.pic}.webp`;
+          const imagePath = `pics/${selectedItem.pic}`;
 
           eventImage.src = imagePath;
           eventImage.onload = function () {

@@ -26,10 +26,10 @@ main {
   padding: 2rem;
 }
 
+/* explanation */
 .explanation {
   max-width: 600px;
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .explanation-time {
@@ -39,6 +39,32 @@ main {
   font-style: italic;
   color:#7f7f7f;
 }
+
+/* Quotes */
+#quotes {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #585858;
+}
+
+#quote-author {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
+  color: #585858;
+}
+
+.quote-container {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
 
 /* Timeline */
 #visualization {
