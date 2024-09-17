@@ -31,6 +31,7 @@ fetch("quotes.json")
     console.error("Error loading quotes:", error);
   });
 
+// Fetch descriptions for events
 fetch("descriptions.json")
   .then((response) => response.json())
   .then((descriptions) => {
@@ -41,40 +42,80 @@ fetch("descriptions.json")
         content: "High Republic Era",
         start: new Date(-500, 1, 1),
         end: new Date(-100, 12, 31),
+        className: "republic",
         type: "background",
-        style: "background-color: lightblue;",
       },
       {
         id: "B",
         content: "Regime of the Empire",
         start: new Date(-19, 10, 1),
         end: "0005-12-31",
+        className: "empire",
         type: "background",
-        style: "background-color: pink;",
       },
       {
         id: "C",
         content: "New Republic Era",
         start: "0005-01-01",
         end: "0034-12-31",
+        className: "republic",
         type: "background",
-        style: "background-color: lightblue;",
       },
       {
         id: "D",
         content: "Regime of the First Order",
-        start: "0021-01-01",
+        start: "0029-01-01",
         end: "0035-12-31",
+        className: "empire",
         type: "background",
-        style: "background-color: pink;",
       },
       {
         id: "E",
         content: "Old Republic Era",
         start: new Date(-25000, 1, 1),
         end: new Date(-1032, 1, 1),
+        className: "republic",
         type: "background",
-        style: "background-color: lightblue;",
+      },
+      {
+        id: "F",
+        content: "Age of the Infinite Empire",
+        start: new Date(-36453, 1, 1),
+        end: new Date(-25200, 1, 1),
+        className: "empire",
+        type: "background",
+      },
+      {
+        id: "G",
+        content: "Age of the Sith Empire",
+        start: new Date(-4980, 1, 1),
+        end: new Date(-3640, 1, 1),
+        className: "empire",
+        type: "background",
+      },
+      {
+        id: "H",
+        content: "Age of the Original Sith Empire",
+        start: new Date(-6900, 1, 1),
+        end: new Date(-5000, 1, 1),
+        className: "empire",
+        type: "background",
+      },
+      {
+        id: "I",
+        content: "Age of the Reorganized Sith Empire",
+        start: new Date(-3636, 1, 1),
+        end: new Date(-2000, 1, 1),
+        className: "empire",
+        type: "background",
+      },
+      {
+        id: "J",
+        content: "Age of the New Sith Empire",
+        start: new Date(-2000, 1, 1),
+        end: new Date(-1100, 1, 1),
+        className: "empire",
+        type: "background",
       },
 
       // ------------------------------------------- Items
@@ -261,8 +302,43 @@ fetch("descriptions.json")
       {
         id: 25,
         content: "Public Announcement of the First Order",
+        start: "0029-01-01",
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 26,
+        content: "Establishment of the First Order",
         start: "0021-01-01",
-        description: descriptions["12"],
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 27,
+        content: "Restoration of the Old Republic",
+        start: new Date(-1032, 1, 1),
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 28,
+        content: "Establishment of the Rule of Two",
+        start: new Date(-1032, 1, 1),
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 29,
+        content: "Establishment of the Old Republic",
+        start: new Date(-25000, 1, 1),
+        description: descriptions[""],
+        pic: "",
+      },
+      {
+        id: 37,
+        content: "Fall of the Infinite Empire",
+        start: new Date(-25200, 1, 1),
+        description: descriptions[""],
         pic: "",
       },
 
@@ -284,6 +360,14 @@ fetch("descriptions.json")
         type: "range",
         description: descriptions["14"],
       },
+      {
+        id: 32,
+        content: "Great Hyperspace Wars",
+        start: new Date(-5000, 1, 1),
+        end: new Date(-5000, 12, 31),
+        type: "range",
+        description: descriptions[""],
+      },
 
       // Battles
       {
@@ -296,17 +380,53 @@ fetch("descriptions.json")
       // Events
       {
         id: 16,
-        content: "item 7",
-        start: new Date(-100, 11, 31),
-        description: descriptions["16"],
+        content: "Founding of the Jedi Order",
+        start: new Date(-25025, 1, 1),
+        description: descriptions[""],
+      },
+      {
+        id: 30,
+        content: "Hundred-Year Darkness",
+        start: new Date(-5000, 1, 1),
+        description: descriptions[""],
+      },
+      {
+        id: 31,
+        content: "Formation of the Sith Order",
+        start: new Date(-5000, 1, 1),
+        description: descriptions[""],
+      },
+      {
+        id: 33,
+        content: "Collapse of the Jedi Order",
+        start: new Date(-19, 1, 1),
+        description: descriptions[""],
+      },
+      {
+        id: 34,
+        content: "Hyperspace Tractor Beam",
+        start: new Date(-1000000, 1, 1),
+        description: descriptions["34"],
+      },
+      {
+        id: 35,
+        content: "First possible Hyperdrive",
+        start: new Date(-19, 1, 1),
+        description: descriptions["35"],
+      },
+      {
+        id: 36,
+        content: "First Force-Drive",
+        start: new Date(-36453, 1, 1),
+        description: descriptions["36"],
       },
     ]);
 
     // ------------------------------------------- Initialize Timeline
     var container = document.getElementById("visualization");
     var options = {
-      start: new Date(-5, 1, 1),
-      end: "0020-01-01",
+      start: new Date(-15, 1, 1),
+      end: "0010-01-01",
       editable: false,
       showCurrentTime: false,
       height: "300px",
