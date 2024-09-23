@@ -335,9 +335,9 @@ fetch("descriptions.json")
       },
       {
         id: 24,
-        content: "Restoration of the Old Republic",
-        start: new Date(-1032, 1, 1),
-        description: descriptions["24"],
+        content: "FILL THIS SHIT",
+        start: "0021-01-01",
+        description: descriptions["23"],
       },
       {
         id: 25,
