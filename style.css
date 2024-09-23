@@ -135,6 +135,7 @@ main {
   border-radius: 5px;
   max-width: 600px;
   width: 100%;
+  color:white;
 }
 
 #event-details.hidden {
@@ -143,11 +144,12 @@ main {
 
 #event-title {
   margin-top: 0;
+  color:white;
 }
 
 #event-date {
   font-style: italic;
-  color: #666;
+  color: #bfbfbf;
 }
 
 /* Image styles */
