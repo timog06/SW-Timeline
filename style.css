@@ -73,6 +73,13 @@ main {
   opacity: 0.75;
 }
 
+.vis-item.vis-background.other {
+  background: #abffa8;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+
 /* Explanation */
 .explanation {
   max-width: 600px;
