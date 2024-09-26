@@ -360,10 +360,10 @@ fetch("descriptions.json")
       },
       {
         id: 24,
-        content: "FILL THIS SHIT",
-        start: "0021-01-01",
+        content: "Formation of the Original Sith Empire",
+        start: new Date(-6900, 1, 1),
         className: "era-change",
-        description: descriptions["23"],
+        description: descriptions["24"],
       },
       {
         id: 25,
@@ -413,7 +413,6 @@ fetch("descriptions.json")
         start: new Date(-36453, 1, 1),
         className: "era-change",
         description: descriptions["31"],
-        pic: "",
       },
       {
         id: 45,
@@ -530,6 +529,13 @@ fetch("descriptions.json")
         start: new Date(-36453, 1, 1),
         className: "event",
         description: descriptions["43"],
+      },
+      {
+        id: 46,
+        content: "Creation of the Darksaber",
+        start: new Date(-1050, 1, 1),
+        className: "event",
+        description: descriptions["37"],
       },
       
       
