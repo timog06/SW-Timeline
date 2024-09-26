@@ -36,6 +36,13 @@
   - Soll die Timeline scrollbar sein oder sollen Ereignisse anklickbar sein, um mehr Informationen anzuzeigen?
   - Wie wird die Benutzerfreundlichkeit gewährleistet? (z.B. durch Tooltips, Animationen)
 ### SW-Timeline Besipiel
+- Meine SW-Timeline ist horizontal und linear dank vis.js Timeline
+- Die Items sind durch Farben separiert und man kann dies in der Legende nachschauen.
+  - Bei Benutzung von Farben ist eine Legende immer nützlich.
+- Benutzerfreundlichkeit wird durch folgende Punkte gewährleistet:
+  - Bewegliche Timeline.
+  - Ein- und ausblendende Quotes.
+  - Klickbare Ereignisse mit Bild und Text.
 
 ## **4. Auswahl der Timeline-Elemente**
 - **Welche Arten von Elementen werden verwendet?**
@@ -46,33 +53,26 @@
   - Ist die Struktur logisch und leicht nachvollziehbar?
   - Gibt es eine klare Reihenfolge, die den Benutzer durch die Geschichte führt?
 ### SW-Timeline Besipiel
+- Klickbare Ereignisse mit Bild und Text.
+- Die Struktur ist dynamisch, sobald man ein Ereigniss, ein verknüpftes Bild und Beschreibung wird es automatisch angezeigt, wenn man draufklickt.
 
 ## **5. Technische Umsetzung**
 - **Welche Tools und Technologien werden verwendet?**
   - Nutzt du eine spezielle Bibliothek oder Framework zur Erstellung der Timeline? (z.B. TimelineJS, Vis.js)
   - Ist die Webseite responsiv, also für verschiedene Bildschirmgrössen optimiert?
 
-- **Wie wird die Performance sichergestellt?**
-  - Werden die Daten effizient geladen und dargestellt?
-  - Sind die Bilder und Videos optimiert, um die Ladezeiten zu minimieren?
 ### SW-Timeline Besipiel
+- Ich benutze vis.js Timeline library.
 
-## **6. Benutzerfreundlichkeit und Zugänglichkeit**
-- **Wie einfach ist die Navigation durch die Timeline?**
-  - Gibt es eine Möglichkeit, schnell zu einem bestimmten Datum oder Ereignis zu springen?
-  - Sind die Bedienelemente intuitiv?
-
-- **Ist die Timeline barrierefrei?**
-  - Sind die Texte lesbar und kontrastreich genug?
-  - Gibt es alternative Texte für Bilder und eine Unterstützung für Screenreader?
-### SW-Timeline Besipiel
-
-## **7. Feedback und Optimierung**
+## **6. Feedback und Optimierung**
 - **Hast du Feedback von der Zielgruppe eingeholt?**
   - Welche Rückmeldungen hast du erhalten, und wie kannst du die Timeline entsprechend verbessern?
   - Gibt es bekannte Probleme oder Verbesserungsvorschläge?
-### SW-Timeline Besipiel
 
 - **Wie wird die Timeline gewartet?**
   - Planst du regelmässige Updates, um die Timeline aktuell zu halten?
   - Wie einfach ist es, neue Informationen hinzuzufügen oder bestehende zu ändern?
+### SW-Timeline Besipiel
+- Ich habe Rückmeldung von 3 Personen erhalten.
+  - Alle drei haben eine fehlende Legende erwähnt.
+  - Ansonsten wurden keine weiteren Empfehlungen gegeben.
