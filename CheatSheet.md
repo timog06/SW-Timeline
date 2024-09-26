@@ -4,6 +4,8 @@
 - **Was ist der Zweck der Timeline?**
   - Soll die Timeline eine Geschichte erzählen, wichtige Ereignisse hervorheben, oder eine Chronologie darstellen?
   - Wer ist die Zielgruppe? (Fans, Historiker, neue Zuschauer?)
+### SW-Timeline Besipiel
+- Die Timeline sollte Fans helfen die Zeit in Star Wars besser zu verstehen.
 
 ## **2. Inhalt der Timeline**
 - **Welche Ereignisse und Informationen sollen enthalten sein?**
@@ -14,6 +16,11 @@
 - **Welche Quelle nutzt du für die Daten?**
   - Sind die Informationen, die du verwendest, verlässlich und genau?
   - Berücksichtigst du unterschiedliche Perspektiven (z.B. offizielle Kanonquellen vs. Fan-Theorien)?
+### SW-Timeline Besipiel
+- Da Star Wars gefühlt undendlich Ereignisse und wichtige Informationen hat, musste ich diese stark zurückschneiden. Ich habe folgendes in die Timeline genommen:
+  - Hintergrund: Politische Parteien, meist Imperium (Sith) und Republik (Jedi)
+  - Punkte: Filme und Serien, Kriege und grosse Schlachten, Ärawechsel und grosse Events
+- Ich habe für alle Informationen [Wookiepedia](https://starwars.fandom.com/wiki/Main_Page) benutzt.
 
 ## **3. Gestaltung der Timeline**
 - **Wie soll die Timeline visuell aussehen?**
@@ -28,6 +35,7 @@
 - **Gibt es eine Möglichkeit zur Interaktivität?**
   - Soll die Timeline scrollbar sein oder sollen Ereignisse anklickbar sein, um mehr Informationen anzuzeigen?
   - Wie wird die Benutzerfreundlichkeit gewährleistet? (z.B. durch Tooltips, Animationen)
+### SW-Timeline Besipiel
 
 ## **4. Auswahl der Timeline-Elemente**
 - **Welche Arten von Elementen werden verwendet?**
@@ -37,6 +45,7 @@
 - **Wie werden diese Elemente strukturiert?**
   - Ist die Struktur logisch und leicht nachvollziehbar?
   - Gibt es eine klare Reihenfolge, die den Benutzer durch die Geschichte führt?
+### SW-Timeline Besipiel
 
 ## **5. Technische Umsetzung**
 - **Welche Tools und Technologien werden verwendet?**
@@ -46,6 +55,7 @@
 - **Wie wird die Performance sichergestellt?**
   - Werden die Daten effizient geladen und dargestellt?
   - Sind die Bilder und Videos optimiert, um die Ladezeiten zu minimieren?
+### SW-Timeline Besipiel
 
 ## **6. Benutzerfreundlichkeit und Zugänglichkeit**
 - **Wie einfach ist die Navigation durch die Timeline?**
@@ -55,11 +65,13 @@
 - **Ist die Timeline barrierefrei?**
   - Sind die Texte lesbar und kontrastreich genug?
   - Gibt es alternative Texte für Bilder und eine Unterstützung für Screenreader?
+### SW-Timeline Besipiel
 
 ## **7. Feedback und Optimierung**
 - **Hast du Feedback von der Zielgruppe eingeholt?**
   - Welche Rückmeldungen hast du erhalten, und wie kannst du die Timeline entsprechend verbessern?
   - Gibt es bekannte Probleme oder Verbesserungsvorschläge?
+### SW-Timeline Besipiel
 
 - **Wie wird die Timeline gewartet?**
   - Planst du regelmässige Updates, um die Timeline aktuell zu halten?
