@@ -19,11 +19,11 @@
 - **Wie soll die Timeline visuell aussehen?**
   - Lineare oder nicht-lineare Darstellung?
   - Soll die Timeline horizontal oder vertikal verlaufen?
-  - Wie sollen wichtige Ereignisse hervorgehoben werden? (z.B. durch Farben, Symbole oder größere Textgrößen)
+  - Wie sollen wichtige Ereignisse hervorgehoben werden? (z.B. durch Farben, Symbole oder unterschiedliche Textgrössen)
 
 - **Welche Farben und Designs werden verwendet?**
   - Ist das Farbschema konsistent und angenehm für das Auge?
-  - Passt das Design zur Stimmung und dem Thema der Timeline? (z.B. dunklere Farben für ernste Themen)
+  - Passt das Design zur Stimmung und dem Thema der Timeline?
 
 - **Gibt es eine Möglichkeit zur Interaktivität?**
   - Soll die Timeline scrollbar sein oder sollen Ereignisse anklickbar sein, um mehr Informationen anzuzeigen?
@@ -41,7 +41,7 @@
 ## **5. Technische Umsetzung**
 - **Welche Tools und Technologien werden verwendet?**
   - Nutzt du eine spezielle Bibliothek oder Framework zur Erstellung der Timeline? (z.B. TimelineJS, Vis.js)
-  - Ist die Webseite responsiv, also für verschiedene Bildschirmgrößen optimiert?
+  - Ist die Webseite responsiv, also für verschiedene Bildschirmgrössen optimiert?
 
 - **Wie wird die Performance sichergestellt?**
   - Werden die Daten effizient geladen und dargestellt?
@@ -62,5 +62,5 @@
   - Gibt es bekannte Probleme oder Verbesserungsvorschläge?
 
 - **Wie wird die Timeline gewartet?**
-  - Planst du regelmäßige Updates, um die Timeline aktuell zu halten?
+  - Planst du regelmässige Updates, um die Timeline aktuell zu halten?
   - Wie einfach ist es, neue Informationen hinzuzufügen oder bestehende zu ändern?
